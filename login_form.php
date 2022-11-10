@@ -19,15 +19,24 @@
         </div>
        </div>
        <div class="card-body ">
-        <h4 class="card-title">Tania Andrew</h4>
-        <div class="form-group">
-         <label for="exampleInput1" class="bmd-label-floating">Enter Password</label>
-         <input type="password" class="form-control" id="exampleInput1">
-        </div>
+        <h4 class="card-title">Login Page</h4>
+        <form action="_actions/login.php" method="POST">
+
+         <div class="form-group">
+          <label for="exampleInput1" class="bmd-label-floating">Enter Email</label>
+          <input type="email" name="email" class="form-control" id="exampleInput1">
+         </div>
+         <div class="form-group">
+          <label for="exampleInput1" class="bmd-label-floating">Enter Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInput1">
+         </div>
+
+         <div class="card-footer justify-content-center">
+          <input type="submit" class="btn btn-rose btn-round" value="Login">
+         </div>
+        </form>
        </div>
-       <div class="card-footer justify-content-center">
-        <a href="#pablo" class="btn btn-rose btn-round">Unlock</a>
-       </div>
+
       </div>
      </div>
     </div>

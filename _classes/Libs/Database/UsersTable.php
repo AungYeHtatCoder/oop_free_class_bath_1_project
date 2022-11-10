@@ -24,4 +24,29 @@ class UsersTable
    return $e->getMessage();
   }
  }
+
+ // user login
+
+  public function UserLogin($email, $password)
+ {
+  $statement = $this->db->prepare("SELECT users.*, roles.name as role, roles.value FROM users LEFT JOIN roles ON users.role_id = roles.id WHERE email = :email AND password = :password");
+  $statement->execute([
+   ':email' => $email,
+   ':password' => $password
+  ]);
+  $row = $statement->fetch();
+  return $row ?? false;
+ }
+
+ // user profile update
+ 
+ public function ProfileUpdate($id, $profile_name)
+	{
+		$statement = $this->db->prepare(
+			"UPDATE users SET profile=:profile_name WHERE id = :id"
+		);
+		$statement->execute([':profile_name' => $profile_name, ':id' => $id]);
+
+		return $statement->rowCount();
+	}
 }
