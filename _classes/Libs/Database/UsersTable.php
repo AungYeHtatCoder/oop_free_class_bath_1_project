@@ -49,4 +49,29 @@ class UsersTable
 
 		return $statement->rowCount();
 	}
+
+
+ // user name update
+ 
+ public function NameUpdate($id, $name)
+	{
+		$statement = $this->db->prepare(
+			"UPDATE users SET name=:name WHERE id = :id"
+		);
+		$statement->execute([':name' => $name, ':id' => $id]);
+
+		return $statement->rowCount();
+	}
+
+ // user Password update
+ 
+ public function PasswordUpdate($id, $password)
+	{
+		$statement = $this->db->prepare(
+			"UPDATE users SET password=:password WHERE id = :id"
+		);
+		$statement->execute([':password' => $password, ':id' => $id]);
+
+		return $statement->rowCount();
+	}
 }
