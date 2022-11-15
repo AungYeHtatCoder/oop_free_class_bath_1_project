@@ -74,4 +74,17 @@ class UsersTable
 
 		return $statement->rowCount();
 	}
+
+
+	// user phone update
+ 
+ public function PhoneUpdate($id, $phone)
+	{
+		$statement = $this->db->prepare(
+			"UPDATE users SET phone=:phone WHERE id = :id"
+		);
+		$statement->execute([':phone' => $phone, ':id' => $id]);
+
+		return $statement->rowCount();
+	}
 }

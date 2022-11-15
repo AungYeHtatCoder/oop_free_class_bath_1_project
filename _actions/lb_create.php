@@ -8,7 +8,7 @@ $data = [
  'name' => $_POST['name'], 
  'email' => $_POST['email'],
  'password' => md5($_POST['password']),
- 'role_id' => 1,  //admin
+ 'role_id' => 2,  //admin
 ];
 
 // echo "<pre>";

@@ -61,8 +61,22 @@
       </p>
      </a>
      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-      <a class="dropdown-item" href="#">Profile</a>
-      <a class="dropdown-item" href="#">Settings</a>
+      <?php if($auth->value == 1): ?>
+      <a class="dropdown-item" href="admin_profile.php">Admin Profile</a>
+      <?php endif; ?>
+      <?php if($auth->value == 2) : ?>
+      <a class="dropdown-item" href="lb_profile.php">Librian Profile</a>
+      <?php endif; ?>
+      <?php if($auth->value == 3) : ?>
+      <a class="dropdown-item" href="tr_profile.php">Teacher Profile</a>
+      <?php endif; ?>
+      <?php if($auth->value == 4): ?>
+      <a class="dropdown-item" href="st_profile.php">Student Profile</a>
+      <?php endif ?>
+      <?php if($auth->value == 5): ?>
+      <a class="dropdown-item" href="user_profile.php">User Profile</a>
+      <?php endif ?>
+      <!-- <a class="dropdown-item" href="#">Settings</a> -->
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="../_actions/logout.php">Log out</a>
      </div>

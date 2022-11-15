@@ -19,7 +19,7 @@
         </div>
        </div>
        <div class="card-body ">
-        <h4 class="card-title">Registeration page</h4>
+        <h4 class="card-title">Admin Registeration page</h4>
         <form action="_actions/user_create.php" method="POST">
          <div class="form-group">
           <label for="exampleInput1" class="bmd-label-floating">User Name</label>

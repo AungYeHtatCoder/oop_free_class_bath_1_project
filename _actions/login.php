@@ -29,6 +29,10 @@ $user = $table->UserLogin($email, $password);
 if($user->value == 1){
     $_SESSION['user'] = $user;
     header('location: ../admin/admin_profile.php');
-}else{
+}elseif($user->value == 2){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/lb_profile.php');
+}
+else{
  echo "You are not admin";
 }

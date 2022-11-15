@@ -18,23 +18,42 @@
       Dashboard
      </a>
     </li>
-    <li class="nav-item ">
+    <!-- <li class="nav-item ">
      <a href="reg_form.php" class="nav-link">
       <i class="material-icons">person_add</i>
       Register
      </a>
-    </li>
-    <li class="nav-item ">
+    </li> -->
+    <!-- <li class="nav-item ">
      <a href="login_form.php" class="nav-link">
       <i class="material-icons">fingerprint</i>
       Login
      </a>
-    </li>
+    </li> -->
     <li class="nav-item  active ">
      <a href="../pages/lock.html" class="nav-link">
       <i class="material-icons">lock_open</i>
       Lock
      </a>
+    </li>
+
+    <li class="nav-item dropdown">
+     <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      <i class="material-icons">person_add</i>
+      Account
+
+     </a>
+     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+      <a class="dropdown-item" href="admin_reg_form.php">Admin Reg</a>
+      <a class="dropdown-item" href="lb_reg_form.php">Librian Reg</a>
+      <a class="dropdown-item" href="tr_reg_form.php">Teacher Reg</a>
+      <a class="dropdown-item" href="st_reg_form.php">Student Reg</a>
+      <a class="dropdown-item" href="user_reg_form.php">User Reg</a>
+      <a class="dropdown-item" href="login_form.php">Login</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="_actions/logout.php">Log out</a>
+     </div>
     </li>
    </ul>
   </div>
