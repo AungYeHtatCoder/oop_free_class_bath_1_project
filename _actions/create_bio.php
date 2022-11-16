@@ -9,7 +9,7 @@ $auth = Auth::check(); // user table and role table join
 // echo "<pre>";
 // print_r($auth);
 // echo "</pre>";
-$password = md5($_POST['password']);
+$bio = $_POST['bio'];
 $table = new UsersTable(new MySQL());
 
 //$result = $table->NameUpdate($auth->id, $name);
@@ -18,9 +18,9 @@ $table = new UsersTable(new MySQL());
 // echo "</pre>";
 if($table)
 {
-    $table->PasswordUpdate($auth->id, $password);
-    $auth->password = $password;
-    //header("Location: ../admin/admin_profile.php?success_password=update");
+    $table->BioUpdate($auth->id, $bio);
+    $auth->bio = $bio;
+    //header("Location: ../admin/admin_profile.php?success_phone=update");
     if($auth->value === 1)
     {
         header("Location: ../admin/admin_profile.php?success_name=update");
@@ -38,5 +38,5 @@ if($table)
         header("Location: ../admin/user_profile.php?success_name=update");
     }
 }else{
-    header("Location: ../admin/admin_profile.php?error_password=update");
+    header("Location: ../admin/admin_profile.php?error_phone=update");
 }

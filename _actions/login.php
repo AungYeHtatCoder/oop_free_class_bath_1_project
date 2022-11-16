@@ -26,12 +26,21 @@ $user = $table->UserLogin($email, $password);
 // print_r($result);
 // echo "</pre>";
 
-if($user->value == 1){
+if($user->value === 1){
     $_SESSION['user'] = $user;
     header('location: ../admin/admin_profile.php');
-}elseif($user->value == 2){
+}elseif($user->value === 2){
     $_SESSION['user'] = $user;
     header('location: ../admin/lb_profile.php');
+}elseif($user->value === 3){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/tr_profile.php');
+}elseif($user->value === 4){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/st_profile.php');
+}elseif($user->value === 5){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/user_profile.php');
 }
 else{
  echo "You are not admin";

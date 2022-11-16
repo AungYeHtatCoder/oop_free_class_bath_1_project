@@ -87,4 +87,15 @@ class UsersTable
 
 		return $statement->rowCount();
 	}
+
+
+	public function BioUpdate($id, $bio)
+	{
+		$statement = $this->db->prepare(
+			"UPDATE users SET bio=:bio WHERE id = :id"
+		);
+		$statement->execute([':bio' => $bio, ':id' => $id]);
+
+		return $statement->rowCount();
+	}
 }

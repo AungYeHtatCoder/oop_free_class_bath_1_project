@@ -20,7 +20,7 @@
        </div>
        <div class="card-body">
         <h4 class="card-title">Teacher Registeration page</h4>
-        <form action="_actions/user_create.php" method="POST">
+        <form action="_actions/tr_create.php" method="POST">
          <div class="form-group">
           <label for="exampleInput1" class="bmd-label-floating">User Name</label>
           <input type="text" class="form-control" id="exampleInput1" name="name">

@@ -18,9 +18,9 @@
          </a>
         </div>
        </div>
-       <div class="card-body ">
-        <h4 class="card-title">Student Registeration page</h4>
-        <form action="_actions/user_create.php" method="POST">
+       <div class="card-body">
+        <h4 class="card-title">Teacher Registeration page</h4>
+        <form action="_actions/st_create.php" method="POST">
          <div class="form-group">
           <label for="exampleInput1" class="bmd-label-floating">User Name</label>
           <input type="text" class="form-control" id="exampleInput1" name="name">

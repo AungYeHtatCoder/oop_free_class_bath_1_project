@@ -155,19 +155,6 @@ include('layouts/head.php');
          </h4>
          <a href="#pablo" class="btn btn-rose btn-round">Follow</a>
         </div>
-
-        <div class="card-body">
-         <div class="card-header">
-          <h6>Bio</h6>
-         </div>
-
-         <p><?= $auth->bio ?></p>
-
-         <form action="../_actions/create_bio.php" method="post">
-          <textarea name="bio" id="" cols="30" rows="10"></textarea>
-          <input type="submit" class="btn btn-primary btn-round" value="Add Bio">
-         </form>
-        </div>
        </div>
 
 
