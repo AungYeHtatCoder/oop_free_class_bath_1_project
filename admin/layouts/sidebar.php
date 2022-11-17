@@ -25,12 +25,47 @@
     </a>
     <div class="collapse" id="collapseExample">
      <ul class="nav">
+      <?php if($auth->value === 1) : ?>
       <li class="nav-item">
        <a class="nav-link" href="#">
-        <span class="sidebar-mini"> MP </span>
-        <span class="sidebar-normal"> My Profile </span>
+        <span class="sidebar-mini"> AP </span>
+        <span class="sidebar-normal"> Admin Profile </span>
        </a>
       </li>
+
+      <?php endif; ?>
+      <?php if($auth->value === 2) : ?>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        <span class="sidebar-mini"> LP </span>
+        <span class="sidebar-normal"> Librian Profile </span>
+       </a>
+      </li>
+      <?php endif; ?>
+      <?php if($auth->value === 3) : ?>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        <span class="sidebar-mini"> TP </span>
+        <span class="sidebar-normal"> Teacher Profile </span>
+       </a>
+      </li>
+      <?php endif; ?>
+      <?php if($auth->value === 4) : ?>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        <span class="sidebar-mini"> SP </span>
+        <span class="sidebar-normal"> Student Profile </span>
+       </a>
+      </li>
+      <?php endif; ?>
+      <?php if($auth->value === 5) : ?>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        <span class="sidebar-mini"> UP </span>
+        <span class="sidebar-normal"> User Profile </span>
+       </a>
+      </li>
+      <?php endif; ?>
       <li class="nav-item">
        <a class="nav-link" href="#">
         <span class="sidebar-mini"> EP </span>
@@ -56,17 +91,17 @@
    </li>
    <li class="nav-item ">
     <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-     <i class="material-icons">image</i>
-     <p> Pages
+     <i class="material-icons">manage_accounts</i>
+     <p> UserManagement
       <b class="caret"></b>
      </p>
     </a>
     <div class="collapse" id="pagesExamples">
      <ul class="nav">
       <li class="nav-item ">
-       <a class="nav-link" href="../examples/pages/pricing.html">
-        <span class="sidebar-mini"> P </span>
-        <span class="sidebar-normal"> Pricing </span>
+       <a class="nav-link" href="user_index.php">
+        <span class="sidebar-mini"> U L </span>
+        <span class="sidebar-normal"> User List </span>
        </a>
       </li>
       <li class="nav-item ">

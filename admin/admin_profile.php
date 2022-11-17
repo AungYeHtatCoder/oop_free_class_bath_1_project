@@ -156,23 +156,23 @@ include('layouts/head.php');
          <a href="#pablo" class="btn btn-rose btn-round">Follow</a>
         </div>
 
-        <div class="card-body">
+        <div class="card card-profile">
          <div class="card-header">
-          <h6>Bio</h6>
+          <h6> <i class="material-icons text-left">favorite</i> &nbsp; &nbsp; <span>Bio</span></h6>
          </div>
-
-         <p><?= $auth->bio ?></p>
-
-         <form action="../_actions/create_bio.php" method="post">
-          <textarea name="bio" id="" cols="30" rows="10"></textarea>
-          <input type="submit" class="btn btn-primary btn-round" value="Add Bio">
-         </form>
+         <div class="card-body">
+          <p class="card-description text-left">
+           <?= $auth->bio ?>
+          </p>
+          <form action="../_actions/create_bio.php" method="post">
+           <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="bio"></textarea>
+           </div>
+           <input type="submit" class="btn btn-rose pull-right" value="Update Bio">
+          </form>
+         </div>
         </div>
        </div>
-
-
-
-
        <!-- profile update start -->
 
        <div class="card card-profile mt-5">

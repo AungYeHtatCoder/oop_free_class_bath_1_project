@@ -98,4 +98,38 @@ class UsersTable
 
 		return $statement->rowCount();
 	}
+
+	// get all users data join with roles	table
+	public function getAllUsers()
+	{
+		$statement = $this->db->prepare(
+			"SELECT users.*, roles.name as role, roles.value FROM users LEFT JOIN roles ON users.role_id = roles.id" 
+		);
+		$statement->execute();
+		$users = $statement->fetchAll();
+		return $users;
+	}
+
+	// get user by id join with	roles table
+	public function getUserById($id)  
+	{
+		$statement = $this->db->prepare(
+			"SELECT users.*, roles.name as role, roles.value FROM users LEFT JOIN roles ON users.role_id = roles.id WHERE users.id = :id" 
+		);
+		$statement->execute([':id' => $id]);
+		$user = $statement->fetch();
+		return $user;
+	}
+
+	// delete user by id
+	public function deleteUserById($id)
+	{
+		$statement = $this->db->prepare(
+			"DELETE FROM users WHERE id = :id"
+		);
+		$statement->execute([':id' => $id]);
+
+		return $statement->rowCount();
+	}
+	
 }
