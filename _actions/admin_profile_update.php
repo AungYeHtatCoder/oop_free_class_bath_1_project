@@ -27,7 +27,20 @@ if($type === "image/jpeg" or $type === "image/png")
     if($auth->value == 1)
     {
         header("Location: ../admin/admin_profile.php?success_profile=update");
-    }else{
+    }elseif($user->value === 2){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/lb_profile.php');
+}elseif($user->value === 3){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/tr_profile.php');
+}elseif($user->value === 4){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/st_profile.php');
+}elseif($user->value === 5){
+    $_SESSION['user'] = $user;
+    header('location: ../admin/user_profile.php');
+}
+    else{
         header("Location: ../admin/admin_profile.php?success_profile=update");
     }
 }

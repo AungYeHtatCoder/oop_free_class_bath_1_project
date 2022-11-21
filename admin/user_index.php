@@ -53,7 +53,7 @@ include('layouts/head.php');
              <th>UserName</th>
              <th>Email</th>
              <th>Phone</th>
-             <th>Profile</th>
+             <th>Role</th>
              <th class="disabled-sorting text-right">Actions</th>
             </tr>
            </thead>
@@ -63,7 +63,7 @@ include('layouts/head.php');
              <th>UserName</th>
              <th>Email</th>
              <th>Phone</th>
-             <th>Profile</th>
+             <th>Role</th>
              <th class="text-right">Actions</th>
             </tr>
            </tfoot>
@@ -74,9 +74,7 @@ include('layouts/head.php');
              <td><?= $user->name; ?></td>
              <td><?= $user->email; ?></td>
              <td><?= $user->phone; ?></td>
-             <td>
-              <img src="../_actions/profile/<?= $user->profile; ?>" alt="" width="100px" height="100px">
-             </td>
+
              <td class="text-right">
               <a href="user_edit_form.php?id=<?= $user->id; ?>" class="btn btn-link btn-warning btn-just-icon edit"><i
                 class="material-icons">edit</i></a>
