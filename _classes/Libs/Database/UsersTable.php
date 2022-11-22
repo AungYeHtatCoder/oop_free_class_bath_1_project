@@ -132,4 +132,18 @@ class UsersTable
 		return $statement->rowCount();
 	}
 	
+
+	
+  // update role_id 
+  public function updateRole($id, $role_id)
+  {
+    try {
+      $query = "UPDATE users SET role_id = :role_id WHERE id = :id";
+      $statement = $this->db->prepare($query);
+      $statement->execute([':role_id' => $role_id, ':id' => $id]);
+      return $statement->rowCount();
+    } catch (PDOException $e) {
+      return $e->getMessage();
+    } 
+    }
 }

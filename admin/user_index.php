@@ -2,10 +2,13 @@
 include('../vendor/autoload.php');
 use Libs\Database\MySQL;
 use Libs\Database\UsersTable;
+use Libs\Database\RoleTable;
 
 $table = new UsersTable(new MySQL());
 
 $users = $table->getAllUsers();  // user table data , role table data all 
+$table_role = new RoleTable(new MySQL());
+$roles = $table_role->GetAllRoles();  
 
 // echo "<pre>";
 // print_r($users);
@@ -35,6 +38,16 @@ include('layouts/head.php');
        <strong>Error!</strong> User has not been Deleted.
       </div>
       <?php } ?>
+
+      <?php if(isset($_GET['success_ch_role']) && $_GET['success_ch_role'] == true){ ?>
+      <div class="alert alert-rose">
+       <strong>Success!</strong> Role has been Changed.
+      </div>
+      <?php } else if(isset($_GET['error_ch_role']) && $_GET['error_ch_role'] == true){ ?>
+      <div class="alert alert-rose">
+       <strong>Error!</strong> Role has not been Changed.
+      </div>
+      <?php } ?>
       <div class="row">
        <div class="col-md-12">
         <div class="card">
@@ -52,8 +65,8 @@ include('layouts/head.php');
              <th>ID</th>
              <th>UserName</th>
              <th>Email</th>
-             <th>Phone</th>
              <th>Role</th>
+             <th>Role Change</th>
              <th class="disabled-sorting text-right">Actions</th>
             </tr>
            </thead>
@@ -62,8 +75,8 @@ include('layouts/head.php');
              <th>ID</th>
              <th>UserName</th>
              <th>Email</th>
-             <th>Phone</th>
              <th>Role</th>
+             <th>Role Chante</th>
              <th class="text-right">Actions</th>
             </tr>
            </tfoot>
@@ -73,17 +86,29 @@ include('layouts/head.php');
              <td><?= $user->id; ?></td>
              <td><?= $user->name; ?></td>
              <td><?= $user->email; ?></td>
-             <td><?= $user->phone; ?></td>
-
+             <td><?= $user->role; ?></td>
+             <td>
+              <form action="../_actions/change_role.php" method="post">
+               <input type="hidden" name="id" value="<?= $user->id; ?>">
+               <select name="role_id" class="selectpicker" data-size="7" data-style="btn btn-primary btn-round"
+                title="Change Role">
+                <?php foreach ($roles as $role) : ?>
+                <option value="<?= $role->id ?>" <?= $user->role_id == $role->id ? 'selected' : '' ?>>
+                 <?= $role->name ?></option>
+                <?php endforeach; ?>
+               </select>
+               <?php if($auth->value === 1) : ?>
+               <input type="submit" class="btn btn-primary" value="Change">
+               <?php endif; ?>
+              </form>
+             </td>
              <td class="text-right">
-              <a href="user_edit_form.php?id=<?= $user->id; ?>" class="btn btn-link btn-warning btn-just-icon edit"><i
-                class="material-icons">edit</i></a>
-
               <a href="user_detail.php?id=<?= $user->id; ?>" class="btn btn-link btn-warning btn-just-icon edit"><i
                 class="material-icons">visibility</i></a>
-
+              <?php if($auth->value === 1) : ?>
               <a href="../_actions/user_delete.php?id=<?= $user->id; ?>"
                class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">delete</i></a>
+              <?php endif; ?>
              </td>
             </tr>
             <?php endforeach; ?>
