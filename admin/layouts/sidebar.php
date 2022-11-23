@@ -149,6 +149,68 @@
      </ul>
     </div>
    </li>
+   <!-- Library Management Start -->
+   <li class="nav-item ">
+    <a class="nav-link" data-toggle="collapse" href="#library_management">
+     <i class="material-icons">local_library</i>
+     <p> LibraryManagement
+      <b class="caret"></b>
+     </p>
+    </a>
+    <div class="collapse" id="library_management">
+     <ul class="nav">
+      <li class="nav-item ">
+       <a class="nav-link" href="category_index.php">
+        <span class="sidebar-mini"> C L </span>
+        <span class="sidebar-normal"> Category List </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="role_index.php">
+        <span class="sidebar-mini"> RL </span>
+        <span class="sidebar-normal"> Role List </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/timeline.html">
+        <span class="sidebar-mini"> T </span>
+        <span class="sidebar-normal"> Timeline </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/login.html">
+        <span class="sidebar-mini"> LP </span>
+        <span class="sidebar-normal"> Login Page </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/register.html">
+        <span class="sidebar-mini"> RP </span>
+        <span class="sidebar-normal"> Register Page </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/lock.html">
+        <span class="sidebar-mini"> LSP </span>
+        <span class="sidebar-normal"> Lock Screen Page </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/user.html">
+        <span class="sidebar-mini"> UP </span>
+        <span class="sidebar-normal"> User Profile </span>
+       </a>
+      </li>
+      <li class="nav-item ">
+       <a class="nav-link" href="../examples/pages/error.html">
+        <span class="sidebar-mini"> E </span>
+        <span class="sidebar-normal"> Error Page </span>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </li>
+   <!-- Library Management End -->
    <li class="nav-item ">
     <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
      <i class="material-icons">apps</i>
