@@ -166,15 +166,15 @@
        </a>
       </li>
       <li class="nav-item ">
-       <a class="nav-link" href="role_index.php">
-        <span class="sidebar-mini"> RL </span>
-        <span class="sidebar-normal"> Role List </span>
+       <a class="nav-link" href="author_index.php">
+        <span class="sidebar-mini"> A L </span>
+        <span class="sidebar-normal"> Author List </span>
        </a>
       </li>
       <li class="nav-item ">
-       <a class="nav-link" href="../examples/pages/timeline.html">
-        <span class="sidebar-mini"> T </span>
-        <span class="sidebar-normal"> Timeline </span>
+       <a class="nav-link" href="publisher_index.php">
+        <span class="sidebar-mini"> P L </span>
+        <span class="sidebar-normal"> Publisher List </span>
        </a>
       </li>
       <li class="nav-item ">
