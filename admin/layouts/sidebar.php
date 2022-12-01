@@ -178,9 +178,9 @@
        </a>
       </li>
       <li class="nav-item ">
-       <a class="nav-link" href="../examples/pages/login.html">
-        <span class="sidebar-mini"> LP </span>
-        <span class="sidebar-normal"> Login Page </span>
+       <a class="nav-link" href="book_index.php">
+        <span class="sidebar-mini"> B L </span>
+        <span class="sidebar-normal"> Book List </span>
        </a>
       </li>
       <li class="nav-item ">
